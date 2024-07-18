@@ -1,0 +1,124 @@
+/* Common styles */
+.homepage .headingfaq{
+    font-size: 48px;
+    font-weight: bold;
+
+}
+.homepage {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 20px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.homepage > * {
+    flex: 1;
+    margin: 10px;
+}
+
+/* Header animation */
+.h1-styles {
+    font-size: 5rem;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out; /* Slower animation */
+}
+
+/* Side global animation */
+.side-global {
+    font-size: 5rem;
+    font-weight: bold;
+    animation: scaleIn 1s ease-in-out; /* Slower animation */
+}
+
+/* Side paragraph animation */
+.homepage .sidepara {
+    margin-bottom: 1.5rem;
+    color: rgb(90, 90, 139);
+    animation: fadeIn 1s ease-out; /* Slower animation */
+}
+
+/* Get started button animation */
+.homepage .get-started-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+    animation: pulse 1.5s infinite; /* Slower animation */
+}
+
+/* Button hover animation */
+.homepage .get-started-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media queries for responsive animations (if needed) */
+@media (max-width: 640px) {
+    .h1-styles {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .h1-styles {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .h1-styles {
+        font-size: 4rem;
+    }
+}
